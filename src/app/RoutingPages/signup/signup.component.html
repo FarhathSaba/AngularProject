@@ -1,0 +1,57 @@
+<div class="container mb-0">
+    <h5>NEW USER REGISTERATION</h5>
+    
+    <form [formGroup]="this.crudService.form">
+      <div class="form-group">
+      <input
+        placeholder="Email address"
+        formControlName="userId"
+        type="text"
+        class="form-control col s12"
+      />
+      </div>
+    
+      <div class="form-group">
+      <input
+        class="form-control col s12"
+        placeholder="Password"
+        type="password"
+        [(ngModel)]="password" 
+        [ngModelOptions]="{standalone: true}"
+      />
+    </div>
+    
+    <div class="form-group">
+      <input
+        class="form-control col s12"
+        placeholder="Customer Name"
+        formControlName="customerName"
+        type="text"
+      />
+    </div>
+    
+    <div class="form-group">
+      <input
+        class="form-control col s12"
+        placeholder="Address"
+        formControlName="Address"
+        type="text"
+      />
+    </div>
+    
+    <div class="form-group">
+      <input
+        class="form-control col s12"
+        placeholder="phoneNo "
+        formControlName="phoneNo"
+        type="number"
+      />
+    </div>
+          
+      <button class="btn btn-dark mr-5 mt-3 col-sm-12"   (click)="onSubmit()">
+        Submit
+      </button>
+    
+    </form>
+    
+    </div>

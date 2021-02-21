@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>ALL TRANSACTIONS</h2>     
+    <table class="table pt-10">
+      <thead>
+        <tr>
+          <th>RefernceNo</th>
+          <th>BeneficiaryBank</th>
+          <th>BeneficiaryAccountNo</th>
+          <th>TransferAmount</th>
+          <th>TransferCurrency</th>
+          <th>PaymentDetails</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor= "let item of viewTransactionList">
+          <td>{{item.referenceNo}}</td>
+          <td>{{item.beneficiaryBank}}</td>
+          <td>{{item.beneficiaryAccountNo}}</td>
+          <td>{{item.transferAmount}}</td>
+          <td>{{item.transferCurrency}}</td>
+          <td>{{item.paymentDetails}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

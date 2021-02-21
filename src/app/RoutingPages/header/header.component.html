@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" (click)="navigateToHome()">UPI APPLICATION</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <ng-container *ngIf="show">
+        <li class="navbar-brand text-white-50" *ngIf="(authenticationService.userData | async)">Welcome {{ (authenticationService.userData | async)?.email }}</li>
+        </ng-container>      
+        <button (click)="signOut()" class="btn btn-dark" style="margin-left:5px;" *ngIf="authenticationService.userData | async" >LogOut</button>    
+      </ul>
+    </div>
+  </nav>
+    

@@ -1,0 +1,112 @@
+<div class="container mb-0 mr-5" style="overflow-y: auto;">
+    <h5>NEW TRANSACTION</h5>
+    
+    <form [formGroup]="this.crudService.transactionForm">
+      <div class="form-group row">
+      <label class="col-sm-3" for="customerNo">customerNo:</label>
+      <input
+        placeholder="customerNo"
+        formControlName="customerNo"
+        type="text"
+        class="form-control col-sm-6"
+        [(ngModel)]="this.userdetails.customerNo" 
+        disabled
+      />
+      </div>
+        
+    <div class="form-group row">
+      <label class="col-sm-3" for="customerName">customerName:</label>
+      <input
+        class="form-control col-sm-6"
+        placeholder="Customer Name"
+        formControlName="customerName"
+        type="text"
+        [(ngModel)]="this.userdetails.customerName" 
+        disabled
+      />
+    </div>
+    
+    <div class="form-group row">
+      <label class="col-sm-3" for="Address">customerAddress:</label>
+      <input
+        class="form-control col-sm-6"
+        placeholder="customerAddress"
+        formControlName="customerAddress"
+        type="text"
+        [(ngModel)]="this.userdetails.Address" 
+        disabled
+      />
+    </div>
+    
+    <div class="form-group row">
+      <label class="col-sm-3" for="phoneNo">customerPhoneNo:</label>
+      <input
+        class="form-control col-sm-6"
+        placeholder="phoneNo "
+        formControlName="phoneNo"
+        type="number"
+        [(ngModel)]="this.userdetails.phoneNo" 
+        disabled
+      />
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-3" for="transferAmount">TransferAmount:</label>
+        <input
+          class="form-control col-sm-6"
+          placeholder="transferAmount "
+          formControlName="transferAmount"
+          type="number"
+        />
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-3" for="transferCurrency">TransferCurrency:</label>
+      <select name="transferCurrency" id="transferCurrency">
+        <option value="AED">AED</option>
+        <option value="EUR">EUR</option>
+        <option value="CHF">CHF</option>
+        <option value="MUR">MUR</option>
+        <option value="USD">USD</option>
+      </select>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-3" for="beneficiaryBank">BeneficiaryBank:</label>
+        <input
+          class="form-control col-sm-6"
+          placeholder="beneficiaryBank "
+          formControlName="beneficiaryBank"
+          type="text"
+        />
+    </div>
+    
+    
+    <div class="form-group row">
+      <label class="col-sm-3"for="beneficiaryBank">BeneficiaryAccountNo:</label>
+        <input
+          class="form-control col-sm-6"
+          placeholder="beneficiaryAccountNo "
+          formControlName="beneficiaryAccountNo"
+          type="text"
+        />
+    </div>
+
+    
+    <div class="form-group row">
+      <label class="col-sm-3" for="paymentDetails">PaymentDetails:</label>
+        <input
+          class="form-control col-sm-6"
+          placeholder="paymentDetails "
+          formControlName="paymentDetails"
+          type="text"
+        />
+    </div>
+          
+    <button class="btn btn-dark mr-5 mt-2 col-sm-6"   (click)="onSubmit()">
+        Submit
+    </button>
+    
+    </form>
+    
+    </div>
