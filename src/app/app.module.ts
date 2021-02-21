@@ -13,7 +13,7 @@ import { HeaderComponent } from './RoutingPages/header/header.component';
 import { HomeComponent } from './RoutingPages/home/home.component';
 import { SignupComponent } from './RoutingPages/signup/signup.component';
 import { CRUDService } from './services/crud.service';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 import { NewTransactionComponent } from './RoutingPages/new-transaction/new-transaction.component';
 import { ViewtransactionComponent } from './RoutingPages/viewtransaction/viewtransaction.component';
 
@@ -32,6 +32,7 @@ import { ViewtransactionComponent } from './RoutingPages/viewtransaction/viewtra
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, "cloud"),
     AngularFireAuthModule
   ],
